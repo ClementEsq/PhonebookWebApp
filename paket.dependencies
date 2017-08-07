@@ -24,4 +24,7 @@ nuget Microsoft.CodeDom.Providers.DotNetCompilerPlatform
 nuget Microsoft.Net.Compilers
 nuget angularjs
 nuget Microsoft.AspNet.WebApi
+nuget Microsoft.AspNet.WebApi.Client
+nuget Microsoft.AspNet.WebApi.Core
+nuget Microsoft.AspNet.WebApi.WebHost
 nuget Autofac.WebApi2

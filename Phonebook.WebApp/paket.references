@@ -18,4 +18,7 @@ Respond
 WebGrease
 angularjs
 Microsoft.AspNet.WebApi
+Microsoft.AspNet.WebApi.Client
+Microsoft.AspNet.WebApi.Core
+Microsoft.AspNet.WebApi.WebHost
 Autofac.WebApi2
