@@ -1,0 +1,27 @@
+﻿<table>
+    <tr>
+        <td height="10px">
+        </td>    
+    </tr>
+</table>
+
+<table class="table table-hover" width="70%">
+    <thead>
+        <tr>
+            <th class="col-md-1">Contacts</th>
+            <th class="col-md-12"></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr data-ng-repeat="Entry in Entries">
+            <td><div id="picture">{{Entry.Name.substring(0,1).toUpperCase()}}</div></td>
+            <td><div class="innerTable">{{Entry.Name}}</div></td>
+            <td><div class="innerTable"><a ng-click="showEntry(Entry.Id)">Details</a></div></td>
+            <td><div class="innerTable"><a ng-click="editEntry(Entry.Id)">Edit</a></div></td>
+            <td><div class="innerTable"><a ng-click="deleteEntry(Entry.Id)">Delete</a></div></td>
+        </tr>
+    </tbody>
+</table>  

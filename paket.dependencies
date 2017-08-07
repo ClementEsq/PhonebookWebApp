@@ -1,0 +1,27 @@
+redirects on
+source https://api.nuget.org/v3/index.json
+source https://www.nuget.org/api/v2
+
+nuget FAKE
+nuget Autofac
+nuget Autofac.Extras.Moq 
+nuget Newtonsoft.Json
+nuget Antlr
+nuget Autofac.Mvc5
+nuget bootstrap
+nuget jQuery
+nuget jQuery.Validation
+nuget Microsoft.AspNet.Mvc
+nuget Microsoft.AspNet.Razor
+nuget Microsoft.AspNet.Web.Optimization
+nuget Microsoft.AspNet.WebPages
+nuget Microsoft.jQuery.Unobtrusive.Validation
+nuget Microsoft.Web.Infrastructure
+nuget Modernizr
+nuget Respond
+nuget WebGrease
+nuget Microsoft.CodeDom.Providers.DotNetCompilerPlatform
+nuget Microsoft.Net.Compilers
+nuget angularjs
+nuget Microsoft.AspNet.WebApi
+nuget Autofac.WebApi2

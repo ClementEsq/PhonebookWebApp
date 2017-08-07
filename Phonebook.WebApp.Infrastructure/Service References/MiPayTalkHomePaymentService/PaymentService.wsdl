@@ -1,0 +1,1156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.mi-pay.com/WebServices" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.mi-pay.com/WebServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.mi-pay.com/WebServices">
+      <s:element name="PaymentStartMethod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ClientReference" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Amount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Currency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SuccessURL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FailureURL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Salutation" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AddressLine1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AddressLine2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CountyOrProvince" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PostalCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HomeTelNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DateTimeLocal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SubID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PaymentStartMethodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PaymentStartMethodResult" type="tns:PaymentStartResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PaymentStartResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorFields" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentURL" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PaymentStartWithLocale">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ClientReference" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Amount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Currency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SuccessURL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FailureURL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Salutation" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AddressLine1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AddressLine2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CountyOrProvince" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PostalCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HomeTelNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DateTimeLocal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SubID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Locale" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PaymentStartWithLocaleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PaymentStartWithLocaleResult" type="tns:PaymentStartResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PaymentStartForKnownUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ClientReference" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Amount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Currency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SuccessURL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FailureURL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Salutation" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AddressLine1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AddressLine2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CountyOrProvince" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PostalCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HomeTelNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DateTimeLocal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SubID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Locale" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UniqueID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IDType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MSISDN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AgentUserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PaymentStartForKnownUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PaymentStartForKnownUserResult" type="tns:PaymentStartResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PaymentRetrieveMethod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ClientReference" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SubID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NoStateChange" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PaymentRetrieveMethodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PaymentRetrieveMethodResult" type="tns:PaymentRetrieveResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PaymentRetrieveResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="auditList" type="tns:ArrayOfAuditList" />
+          <s:element minOccurs="0" maxOccurs="1" name="UniqueIDValue" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UniqueIDType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegisteredMerchantID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorFields" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientRef" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AuthAmount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Currency" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CaptureAmount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastUpdated" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderResult" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Salutation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddressLine1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddressLine2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CountyOrProvince" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PostalCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HomeTelNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MSISDN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DateTimeLocal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientData" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FinalAmount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="State" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="OriginalSwitchKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AgentUserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SuccessURL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FailureURL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Locale" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAuditList">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AuditList" nillable="true" type="tns:AuditList" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AuditList">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OldState" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NewState" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Happened" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PaymentAuthMethod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ClientReference" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DateTimeLocal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Salutation" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Address1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Address2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="County" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Postcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DateOfBirth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HomeTelNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PAN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExpMonth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExpYear" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CVV" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StartYear" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StartMonth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Issue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ThreeDPAReq" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ThreeDXID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ThreeDPARes" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SubID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RequestIPAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MethodOfPaymentIdentifier" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantAuthenticationDetails" type="tns:AuthenticationDetails" />
+            <s:element minOccurs="0" maxOccurs="1" name="DateCreatedAccount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AuthenticationDetails">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MerchantDetails">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AuthenticationToken" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="POSLocation" type="tns:POSLocation" />
+              <s:element minOccurs="0" maxOccurs="1" name="ConsumerIPAddress" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="MerchantDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ChannelType" type="tns:ChannelTypes" />
+          <s:element minOccurs="0" maxOccurs="1" name="AgentUserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RetailerID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ChannelTypes">
+        <s:restriction base="s:string">
+          <s:enumeration value="WEB" />
+          <s:enumeration value="SMS" />
+          <s:enumeration value="EMAIL" />
+          <s:enumeration value="IVR" />
+          <s:enumeration value="RET" />
+          <s:enumeration value="WCC" />
+          <s:enumeration value="MER" />
+          <s:enumeration value="FB" />
+          <s:enumeration value="MOB" />
+          <s:enumeration value="AUTO" />
+          <s:enumeration value="REGULAR" />
+          <s:enumeration value="SCH" />
+          <s:enumeration value="APP" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="POSLocation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="POSLocationValue" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="POSLocationType" type="tns:POSLocationTypes" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="POSLocationTypes">
+        <s:restriction base="s:string">
+          <s:enumeration value="IPAddress" />
+          <s:enumeration value="CLINumber" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="PaymentAuthMethodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PaymentAuthMethodResult" type="tns:PaymentAuthResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PaymentAuthResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorFields" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RetrievalReferenceNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransactionDateTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ThreeDURL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ThreeDPAReq" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ThreeDXID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PaymentAuthExtraMethod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ClientReference" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DateTimeLocal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Salutation" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Address1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Address2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="County" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Postcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DateOfBirth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HomeTelNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PAN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExpMonth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExpYear" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CVV" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StartYear" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StartMonth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Issue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ThreeDPAReq" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ThreeDXID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ThreeDPARes" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SubID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RequestIPAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MethodOfPaymentIdentifier" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Registered" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RememberMe" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AccMaint" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExistingCard" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PaymentRequired" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsMethodOfPayment" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsPersonalDetails" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="Is3DSRequired" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="ExistingPayPal" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="paypalAuthDetails" type="tns:PayPalAuthDetails" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PayPalAuthDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TokenID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayerID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address" type="tns:Address" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Address">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AddressLine1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddressLine2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Town" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="County" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Country" type="tns:CountryCodes" />
+          <s:element minOccurs="0" maxOccurs="1" name="PostCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="CountryCodes">
+        <s:restriction base="s:string">
+          <s:enumeration value="XXX_NO_COUNTRY" />
+          <s:enumeration value="AFG_AFGHANISTAN" />
+          <s:enumeration value="ALB_ALBANIA_PEOPLES_SOCIALIST_REPUBLIC_OF" />
+          <s:enumeration value="DZA_ALGERIA_PEOPLES_DEMOCRATIC_REPUBLIC_OF" />
+          <s:enumeration value="ASM_AMERICAN_SAMOA" />
+          <s:enumeration value="AND_ANDORRA_PRINCIPALITY_OF" />
+          <s:enumeration value="AGO_ANGOLA_REPUBLIC_OF" />
+          <s:enumeration value="AIA_ANGUILLA" />
+          <s:enumeration value="ATA_ANTARCTICA" />
+          <s:enumeration value="ATG_ANTIGUA_AND_BARBUDA" />
+          <s:enumeration value="ARG_ARGENTINA_ARGENTINE_REPUBLIC" />
+          <s:enumeration value="ARM_ARMENIA" />
+          <s:enumeration value="ABW_ARUBA" />
+          <s:enumeration value="AUS_AUSTRALIA_COMMONWEALTH_OF" />
+          <s:enumeration value="AUT_AUSTRIA_REPUBLIC_OF" />
+          <s:enumeration value="AZE_AZERBAIJAN_REPUBLIC_OF" />
+          <s:enumeration value="BHS_BAHAMAS_COMMONWEALTH_OF_THE" />
+          <s:enumeration value="BHR_BAHRAIN_KINGDOM_OF" />
+          <s:enumeration value="BGD_BANGLADESH_PEOPLES_REPUBLIC_OF" />
+          <s:enumeration value="BRB_BARBADOS" />
+          <s:enumeration value="BLR_BELARUS" />
+          <s:enumeration value="BEL_BELGIUM_KINGDOM_OF" />
+          <s:enumeration value="BLZ_BELIZE" />
+          <s:enumeration value="BEN_BENIN_PEOPLES_REPUBLIC_OF" />
+          <s:enumeration value="BMU_BERMUDA" />
+          <s:enumeration value="BTN_BHUTAN_KINGDOM_OF" />
+          <s:enumeration value="BOL_BOLIVIA_REPUBLIC_OF" />
+          <s:enumeration value="BIH_BOSNIA_AND_HERZEGOVINA" />
+          <s:enumeration value="BWA_BOTSWANA_REPUBLIC_OF" />
+          <s:enumeration value="BVT_BOUVET_ISLAND" />
+          <s:enumeration value="BRA_BRAZIL_FEDERATIVE_REPUBLIC_OF" />
+          <s:enumeration value="IOT_BRITISH_INDIAN_OCEAN_TERRITORY" />
+          <s:enumeration value="VGB_BRITISH_VIRGIN_ISLANDS" />
+          <s:enumeration value="BRN_BRUNEI_DARUSSALAM" />
+          <s:enumeration value="BGR_BULGARIA_PEOPLES_REPUBLIC_OF" />
+          <s:enumeration value="BFA_BURKINA_FASO" />
+          <s:enumeration value="BDI_BURUNDI_REPUBLIC_OF" />
+          <s:enumeration value="KHM_CAMBODIA_KINGDOM_OF" />
+          <s:enumeration value="CMR_CAMEROON_UNITED_REPUBLIC_OF" />
+          <s:enumeration value="CAN_CANADA" />
+          <s:enumeration value="CPV_CAPE_VERDE_REPUBLIC_OF" />
+          <s:enumeration value="CYM_CAYMAN_ISLANDS" />
+          <s:enumeration value="CAF_CENTRAL_AFRICAN_REPUBLIC" />
+          <s:enumeration value="TCD_CHAD_REPUBLIC_OF" />
+          <s:enumeration value="CHL_CHILE_REPUBLIC_OF" />
+          <s:enumeration value="CHN_CHINA_PEOPLES_REPUBLIC_OF" />
+          <s:enumeration value="CXR_CHRISTMAS_ISLAND" />
+          <s:enumeration value="CCK_COCOS_ISLANDS" />
+          <s:enumeration value="COL_COLOMBIA_REPUBLIC_OF" />
+          <s:enumeration value="COM_COMOROS_UNION_OF_THE" />
+          <s:enumeration value="COD_CONGO_DEMOCRATIC_REPUBLIC_OF" />
+          <s:enumeration value="COG_CONGO_PEOPLES_REPUBLIC_OF" />
+          <s:enumeration value="COK_COOK_ISLANDS" />
+          <s:enumeration value="CRI_COSTA_RICA_REPUBLIC_OF" />
+          <s:enumeration value="CIV_COTE_DIVOIRE_IVORY_COAST_REPUBLIC_OF_THE" />
+          <s:enumeration value="CUB_CUBA_REPUBLIC_OF" />
+          <s:enumeration value="CYP_CYPRUS_REPUBLIC_OF" />
+          <s:enumeration value="CZE_CZECH_REPUBLIC" />
+          <s:enumeration value="DNK_DENMARK_KINGDOM_OF" />
+          <s:enumeration value="DJI_DJIBOUTI_REPUBLIC_OF" />
+          <s:enumeration value="DMA_DOMINICA_COMMONWEALTH_OF" />
+          <s:enumeration value="DOM_DOMINICAN_REPUBLIC" />
+          <s:enumeration value="ECU_ECUADOR_REPUBLIC_OF" />
+          <s:enumeration value="EGY_EGYPT_ARAB_REPUBLIC_OF" />
+          <s:enumeration value="SLV_EL_SALVADOR_REPUBLIC_OF" />
+          <s:enumeration value="GNQ_EQUATORIAL_GUINEA_REPUBLIC_OF" />
+          <s:enumeration value="ERI_ERITREA" />
+          <s:enumeration value="EST_ESTONIA" />
+          <s:enumeration value="ETH_ETHIOPIA" />
+          <s:enumeration value="FRO_FAEROE_ISLANDS" />
+          <s:enumeration value="FLK_FALKLAND_ISLANDS" />
+          <s:enumeration value="FJI_FIJI_REPUBLIC_OF_THE_FIJI_ISLANDS" />
+          <s:enumeration value="FIN_FINLAND_REPUBLIC_OF" />
+          <s:enumeration value="FRA_FRANCE_FRENCH_REPUBLIC" />
+          <s:enumeration value="GUF_FRENCH_GUIANA" />
+          <s:enumeration value="PYF_FRENCH_POLYNESIA" />
+          <s:enumeration value="ATF_FRENCH_SOUTHERN_TERRITORIES" />
+          <s:enumeration value="GAB_GABON_GABONESE_REPUBLIC" />
+          <s:enumeration value="GMB_GAMBIA_REPUBLIC_OF_THE" />
+          <s:enumeration value="GEO_GEORGIA" />
+          <s:enumeration value="DEU_GERMANY" />
+          <s:enumeration value="GHA_GHANA_REPUBLIC_OF" />
+          <s:enumeration value="GIB_GIBRALTAR" />
+          <s:enumeration value="GRC_GREECE_HELLENIC_REPUBLIC" />
+          <s:enumeration value="GRL_GREENLAND" />
+          <s:enumeration value="GRD_GRENADA" />
+          <s:enumeration value="GLP_GUADALOUPE" />
+          <s:enumeration value="GUM_GUAM" />
+          <s:enumeration value="GTM_GUATEMALA_REPUBLIC_OF" />
+          <s:enumeration value="GIN_GUINEA_REVOLUTIONARY_PEOPLES_REPC_OF" />
+          <s:enumeration value="GNB_GUINEA_BISSAU_REPUBLIC_OF" />
+          <s:enumeration value="GUY_GUYANA_REPUBLIC_OF" />
+          <s:enumeration value="HTI_HAITI_REPUBLIC_OF" />
+          <s:enumeration value="HMD_HEARD_AND_MCDONALD_ISLANDS" />
+          <s:enumeration value="VAT_HOLY_SEE" />
+          <s:enumeration value="HND_HONDURAS_REPUBLIC_OF" />
+          <s:enumeration value="HKG_HONG_KONG_SPECIAL_ADMINISTRATIVE_REGION_OF_CHINA" />
+          <s:enumeration value="HRV_HRVATSKA" />
+          <s:enumeration value="HUN_HUNGARY_HUNGARIAN_PEOPLES_REPUBLIC" />
+          <s:enumeration value="ISL_ICELAND_REPUBLIC_OF" />
+          <s:enumeration value="IND_INDIA_REPUBLIC_OF" />
+          <s:enumeration value="IDN_INDONESIA_REPUBLIC_OF" />
+          <s:enumeration value="IRN_IRAN_ISLAMIC_REPUBLIC_OF" />
+          <s:enumeration value="IRQ_IRAQ_REPUBLIC_OF" />
+          <s:enumeration value="IRL_IRELAND" />
+          <s:enumeration value="ISR_ISRAEL_STATE_OF" />
+          <s:enumeration value="ITA_ITALY_ITALIAN_REPUBLIC" />
+          <s:enumeration value="JAM_JAMAICA" />
+          <s:enumeration value="JPN_JAPAN" />
+          <s:enumeration value="JOR_JORDAN_HASHEMITE_KINGDOM_OF" />
+          <s:enumeration value="KAZ_KAZAKHSTAN_REPUBLIC_OF" />
+          <s:enumeration value="KEN_KENYA_REPUBLIC_OF" />
+          <s:enumeration value="KIR_KIRIBATI_REPUBLIC_OF" />
+          <s:enumeration value="PRK_KOREA_DEMOCRATIC_PEOPLES_REPUBLIC_OF" />
+          <s:enumeration value="KOR_KOREA_REPUBLIC_OF" />
+          <s:enumeration value="KWT_KUWAIT_STATE_OF" />
+          <s:enumeration value="KGZ_KYRGYZ_REPUBLIC" />
+          <s:enumeration value="LAO_LAO_PEOPLES_DEMOCRATIC_REPUBLIC" />
+          <s:enumeration value="LVA_LATVIA" />
+          <s:enumeration value="LBN_LEBANON_LEBANESE_REPUBLIC" />
+          <s:enumeration value="LSO_LESOTHO_KINGDOM_OF" />
+          <s:enumeration value="LBR_LIBERIA_REPUBLIC_OF" />
+          <s:enumeration value="LBY_LIBYAN_ARAB_JAMAHIRIYA" />
+          <s:enumeration value="LIE_LIECHTENSTEIN_PRINCIPALITY_OF" />
+          <s:enumeration value="LTU_LITHUANIA" />
+          <s:enumeration value="LUX_LUXEMBOURG_GRAND_DUCHY_OF" />
+          <s:enumeration value="MAC_MACAO_SPECIAL_ADMINISTRATIVE_REGION_OF_CHINA" />
+          <s:enumeration value="MKD_MACEDONIA_THE_FORMER_YUGOSLAV_REPUBLIC_OF" />
+          <s:enumeration value="MDG_MADAGASCAR_REPUBLIC_OF" />
+          <s:enumeration value="MWI_MALAWI_REPUBLIC_OF" />
+          <s:enumeration value="MYS_MALAYSIA" />
+          <s:enumeration value="MDV_MALDIVES_REPUBLIC_OF" />
+          <s:enumeration value="MLI_MALI_REPUBLIC_OF" />
+          <s:enumeration value="MLT_MALTA_REPUBLIC_OF" />
+          <s:enumeration value="MHL_MARSHALL_ISLANDS" />
+          <s:enumeration value="MTQ_MARTINIQUE" />
+          <s:enumeration value="MRT_MAURITANIA_ISLAMIC_REPUBLIC_OF" />
+          <s:enumeration value="MUS_MAURITIUS" />
+          <s:enumeration value="MYT_MAYOTTE" />
+          <s:enumeration value="MEX_MEXICO_UNITED_MEXICAN_STATES" />
+          <s:enumeration value="FSM_MICRONESIA_FEDERATED_STATES_OF" />
+          <s:enumeration value="MDA_MOLDOVA_REPUBLIC_OF" />
+          <s:enumeration value="MCO_MONACO_PRINCIPALITY_OF" />
+          <s:enumeration value="MNG_MONGOLIA_MONGOLIAN_PEOPLES_REPUBLIC" />
+          <s:enumeration value="MSR_MONTSERRAT" />
+          <s:enumeration value="MAR_MOROCCO_KINGDOM_OF" />
+          <s:enumeration value="MOZ_MOZAMBIQUE_PEOPLES_REPUBLIC_OF" />
+          <s:enumeration value="MMR_MYANMAR" />
+          <s:enumeration value="NAM_NAMIBIA" />
+          <s:enumeration value="NRU_NAURU_REPUBLIC_OF" />
+          <s:enumeration value="NPL_NEPAL_KINGDOM_OF" />
+          <s:enumeration value="ANT_NETHERLANDS_ANTILLES" />
+          <s:enumeration value="NLD_NETHERLANDS_KINGDOM_OF_THE" />
+          <s:enumeration value="NCL_NEW_CALEDONIA" />
+          <s:enumeration value="NZL_NEW_ZEALAND" />
+          <s:enumeration value="NIC_NICARAGUA_REPUBLIC_OF" />
+          <s:enumeration value="NER_NIGER_REPUBLIC_OF_THE" />
+          <s:enumeration value="NGA_NIGERIA_FEDERAL_REPUBLIC_OF" />
+          <s:enumeration value="NIU_NIUE_REPUBLIC_OF" />
+          <s:enumeration value="NFK_NORFOLK_ISLAND" />
+          <s:enumeration value="MNP_NORTHERN_MARIANA_ISLANDS" />
+          <s:enumeration value="NOR_NORWAY_KINGDOM_OF" />
+          <s:enumeration value="OMN_OMAN_SULTANATE_OF" />
+          <s:enumeration value="PAK_PAKISTAN_ISLAMIC_REPUBLIC_OF" />
+          <s:enumeration value="PLW_PALAU" />
+          <s:enumeration value="PSE_PALESTINIAN_TERRITORY_OCCUPIED" />
+          <s:enumeration value="PAN_PANAMA_REPUBLIC_OF" />
+          <s:enumeration value="PNG_PAPUA_NEW_GUINEA" />
+          <s:enumeration value="PRY_PARAGUAY_REPUBLIC_OF" />
+          <s:enumeration value="PER_PERU_REPUBLIC_OF" />
+          <s:enumeration value="PHL_PHILIPPINES_REPUBLIC_OF_THE" />
+          <s:enumeration value="PCN_PITCAIRN_ISLAND" />
+          <s:enumeration value="POL_POLAND_POLISH_PEOPLES_REPUBLIC" />
+          <s:enumeration value="PRT_PORTUGAL_PORTUGUESE_REPUBLIC" />
+          <s:enumeration value="PRI_PUERTO_RICO" />
+          <s:enumeration value="QAT_QATAR_STATE_OF" />
+          <s:enumeration value="REU_REUNION" />
+          <s:enumeration value="ROU_ROMANIA_SOCIALIST_REPUBLIC_OF" />
+          <s:enumeration value="RUS_RUSSIAN_FEDERATION" />
+          <s:enumeration value="RWA_RWANDA_RWANDESE_REPUBLIC" />
+          <s:enumeration value="SHN_ST_HELENA" />
+          <s:enumeration value="KNA_ST_KITTS_AND_NEVIS" />
+          <s:enumeration value="LCA_ST_LUCIA" />
+          <s:enumeration value="SPM_ST_PIERRE_AND_MIQUELON" />
+          <s:enumeration value="VCT_ST_VINCENT_AND_THE_GRENADINES" />
+          <s:enumeration value="WSM_SAMOA_INDEPENDENT_STATE_OF" />
+          <s:enumeration value="SMR_SAN_MARINO_REPUBLIC_OF" />
+          <s:enumeration value="STP_SAO_TOME_AND_PRINCIPE_DEMOCRATIC_REPUBLIC_OF" />
+          <s:enumeration value="SAU_SAUDI_ARABIA_KINGDOM_OF" />
+          <s:enumeration value="SEN_SENEGAL_REPUBLIC_OF" />
+          <s:enumeration value="SCG_SERBIA_AND_MONTENEGRO" />
+          <s:enumeration value="SYC_SEYCHELLES_REPUBLIC_OF" />
+          <s:enumeration value="SLE_SIERRA_LEONE_REPUBLIC_OF" />
+          <s:enumeration value="SGP_SINGAPORE_REPUBLIC_OF" />
+          <s:enumeration value="SVK_SLOVAKIA" />
+          <s:enumeration value="SVN_SLOVENIA" />
+          <s:enumeration value="SLB_SOLOMON_ISLANDS" />
+          <s:enumeration value="SOM_SOMALIA_SOMALI_REPUBLIC" />
+          <s:enumeration value="ZAF_SOUTH_AFRICA_REPUBLIC_OF" />
+          <s:enumeration value="SGS_SOUTH_GEORGIA_AND_THE_SOUTH_SANDWICH_ISLANDS" />
+          <s:enumeration value="ESP_SPAIN_SPANISH_STATE" />
+          <s:enumeration value="LKA_SRI_LANKA_DEMOCRATIC_SOCIALIST_REPUBLIC_OF" />
+          <s:enumeration value="SDN_SUDAN_DEMOCRATIC_REPUBLIC_OF_THE" />
+          <s:enumeration value="SUR_SURINAME_REPUBLIC_OF" />
+          <s:enumeration value="SJM_SVALBARDJAN_MAYEN_ISLANDS" />
+          <s:enumeration value="SWZ_SWAZILAND_KINGDOM_OF" />
+          <s:enumeration value="SWE_SWEDEN_KINGDOM_OF" />
+          <s:enumeration value="CHE_SWITZERLAND_SWISS_CONFEDERATION" />
+          <s:enumeration value="SYR_SYRIAN_ARAB_REPUBLIC" />
+          <s:enumeration value="TWN_TAIWAN_PROVINCE_OF_CHINA" />
+          <s:enumeration value="TJK_TAJIKISTAN" />
+          <s:enumeration value="TZA_TANZANIA_UNITED_REPUBLIC_OF" />
+          <s:enumeration value="THA_THAILAND_KINGDOM_OF" />
+          <s:enumeration value="TLS_TIMOR_LESTE_DEMOCRATIC_REPUBLIC_OF" />
+          <s:enumeration value="TGO_TOGO_TOGOLESE_REPUBLIC" />
+          <s:enumeration value="TKL_TOKELAU" />
+          <s:enumeration value="TON_TONGA_KINGDOM_OF" />
+          <s:enumeration value="TTO_TRINIDAD_AND_TOBAGO_REPUBLIC_OF" />
+          <s:enumeration value="TUN_TUNISIA_REPUBLIC_OF" />
+          <s:enumeration value="TUR_TURKEY_REPUBLIC_OF" />
+          <s:enumeration value="TKM_TURKMENISTAN" />
+          <s:enumeration value="TCA_TURKS_AND_CAICOS_ISLANDS" />
+          <s:enumeration value="TUV_TUVALU" />
+          <s:enumeration value="VIR_US_VIRGIN_ISLANDS" />
+          <s:enumeration value="UGA_UGANDA_REPUBLIC_OF" />
+          <s:enumeration value="UKR_UKRAINE" />
+          <s:enumeration value="ARE_UNITED_ARAB_EMIRATES" />
+          <s:enumeration value="GBR_UNITED_KINGDOM_OF_GREAT_BRITAIN_IRELAND" />
+          <s:enumeration value="UMI_UNITED_STATES_MINOR_OUTLYING_ISLANDS" />
+          <s:enumeration value="USA_UNITED_STATES_OF_AMERICA" />
+          <s:enumeration value="URY_URUGUAY_EASTERN_REPUBLIC_OF" />
+          <s:enumeration value="UZB_UZBEKISTAN" />
+          <s:enumeration value="VUT_VANUATU" />
+          <s:enumeration value="VEN_VENEZUELA_BOLIVARIAN_REPUBLIC_OF" />
+          <s:enumeration value="VNM_VIET_NAM_SOCIALIST_REPUBLIC_OF" />
+          <s:enumeration value="WLF_WALLIS_AND_FUTUNA_ISLANDS" />
+          <s:enumeration value="ESH_WESTERN_SAHARA" />
+          <s:enumeration value="YEM_YEMEN" />
+          <s:enumeration value="ZMB_ZAMBIA_REPUBLIC_OF" />
+          <s:enumeration value="ZWE_ZIMBABWE" />
+          <s:enumeration value="JEY_JERSEY" />
+          <s:enumeration value="GGY_GUERNSEY" />
+          <s:enumeration value="IMN_ISLE_OF_MAN" />
+          <s:enumeration value="ALA_ALAND_ISLANDS" />
+          <s:enumeration value="ASC_ASCENSION_ISLAND" />
+          <s:enumeration value="MNE_MONTENEGRO" />
+          <s:enumeration value="SRB_SERBIA" />
+          <s:enumeration value="SSD_SOUTH_SUDAN" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="PaymentAuthExtraMethodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PaymentAuthExtraMethodResult" type="tns:PaymentAuthResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PaymentFulfilMethod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ClientReference" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SubID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FulfilmentTargetID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PaymentFulfilMethodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PaymentFulfilMethodResult" type="tns:PaymentFulfilResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PaymentFulfilResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorFields" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PaymentCompleteMethod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ClientReference" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CaptureAmount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SubID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PaymentCompleteMethodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PaymentCompleteMethodResult" type="tns:PaymentCompleteResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PaymentCompleteResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorFields" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PaymentCancelMethod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ClientReference" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CaptureAmount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SubID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PaymentCancelMethodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PaymentCancelMethodResult" type="tns:PaymentCompleteResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PaymentListMethod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FromDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ToDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PerPage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PageNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PaymentListMethodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PaymentListMethodResult" type="tns:PaymentListResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PaymentListResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorFields" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentList" type="tns:ArrayOfPaymentListColumn" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfPaymentListColumn">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PaymentListColumn" nillable="true" type="tns:PaymentListColumn" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PaymentListColumn">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientRef" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="State" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastUpdated" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderResult" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AuthAmount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Currency" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FinalAmount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CAVVResult" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DataContain" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UniqueIDValue" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UniqueIDType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegisteredMerchantID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OriginalSwitchKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OriginalSourceNode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MessageType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RetrievalReferenceNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientData" type="tns:ArrayOfClientDataList" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfClientDataList">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ClientDataList" nillable="true" type="tns:ClientDataList" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ClientDataList">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Address1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CountyOrProvince" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DateTimeLocal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HomeTelNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Salutation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PostalCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RequestIPAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Card_Start_Dt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MSISDN" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateSessionResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateOrderResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="PaymentStartMethodSoapIn">
+    <wsdl:part name="parameters" element="tns:PaymentStartMethod" />
+  </wsdl:message>
+  <wsdl:message name="PaymentStartMethodSoapOut">
+    <wsdl:part name="parameters" element="tns:PaymentStartMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="PaymentStartWithLocaleSoapIn">
+    <wsdl:part name="parameters" element="tns:PaymentStartWithLocale" />
+  </wsdl:message>
+  <wsdl:message name="PaymentStartWithLocaleSoapOut">
+    <wsdl:part name="parameters" element="tns:PaymentStartWithLocaleResponse" />
+  </wsdl:message>
+  <wsdl:message name="PaymentStartForKnownUserSoapIn">
+    <wsdl:part name="parameters" element="tns:PaymentStartForKnownUser" />
+  </wsdl:message>
+  <wsdl:message name="PaymentStartForKnownUserSoapOut">
+    <wsdl:part name="parameters" element="tns:PaymentStartForKnownUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="PaymentRetrieveMethodSoapIn">
+    <wsdl:part name="parameters" element="tns:PaymentRetrieveMethod" />
+  </wsdl:message>
+  <wsdl:message name="PaymentRetrieveMethodSoapOut">
+    <wsdl:part name="parameters" element="tns:PaymentRetrieveMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="PaymentAuthMethodSoapIn">
+    <wsdl:part name="parameters" element="tns:PaymentAuthMethod" />
+  </wsdl:message>
+  <wsdl:message name="PaymentAuthMethodSoapOut">
+    <wsdl:part name="parameters" element="tns:PaymentAuthMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="PaymentAuthExtraMethodSoapIn">
+    <wsdl:part name="parameters" element="tns:PaymentAuthExtraMethod" />
+  </wsdl:message>
+  <wsdl:message name="PaymentAuthExtraMethodSoapOut">
+    <wsdl:part name="parameters" element="tns:PaymentAuthExtraMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="PaymentFulfilMethodSoapIn">
+    <wsdl:part name="parameters" element="tns:PaymentFulfilMethod" />
+  </wsdl:message>
+  <wsdl:message name="PaymentFulfilMethodSoapOut">
+    <wsdl:part name="parameters" element="tns:PaymentFulfilMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="PaymentCompleteMethodSoapIn">
+    <wsdl:part name="parameters" element="tns:PaymentCompleteMethod" />
+  </wsdl:message>
+  <wsdl:message name="PaymentCompleteMethodSoapOut">
+    <wsdl:part name="parameters" element="tns:PaymentCompleteMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="PaymentCancelMethodSoapIn">
+    <wsdl:part name="parameters" element="tns:PaymentCancelMethod" />
+  </wsdl:message>
+  <wsdl:message name="PaymentCancelMethodSoapOut">
+    <wsdl:part name="parameters" element="tns:PaymentCancelMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="PaymentListMethodSoapIn">
+    <wsdl:part name="parameters" element="tns:PaymentListMethod" />
+  </wsdl:message>
+  <wsdl:message name="PaymentListMethodSoapOut">
+    <wsdl:part name="parameters" element="tns:PaymentListMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateSession" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateOrder" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateOrderResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PaymentServiceSoap">
+    <wsdl:operation name="PaymentStart">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">* Deprecated, please use PaymentStartForKnownUser *</wsdl:documentation>
+      <wsdl:input name="PaymentStartMethod" message="tns:PaymentStartMethodSoapIn" />
+      <wsdl:output name="PaymentStartMethod" message="tns:PaymentStartMethodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PaymentStartWithLocale">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">* Deprecated, please use PaymentStartForKnownUser *</wsdl:documentation>
+      <wsdl:input message="tns:PaymentStartWithLocaleSoapIn" />
+      <wsdl:output message="tns:PaymentStartWithLocaleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PaymentStartForKnownUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Use this to start an Order and get web page URL to send user to</wsdl:documentation>
+      <wsdl:input message="tns:PaymentStartForKnownUserSoapIn" />
+      <wsdl:output message="tns:PaymentStartForKnownUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PaymentRetrieve">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Use this to find current status of an Order</wsdl:documentation>
+      <wsdl:input name="PaymentRetrieveMethod" message="tns:PaymentRetrieveMethodSoapIn" />
+      <wsdl:output name="PaymentRetrieveMethod" message="tns:PaymentRetrieveMethodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PaymentAuth">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Mi-Pay internal use only</wsdl:documentation>
+      <wsdl:input name="PaymentAuthMethod" message="tns:PaymentAuthMethodSoapIn" />
+      <wsdl:output name="PaymentAuthMethod" message="tns:PaymentAuthMethodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PaymentAuthExtra">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Mi-Pay internal use only</wsdl:documentation>
+      <wsdl:input name="PaymentAuthExtraMethod" message="tns:PaymentAuthExtraMethodSoapIn" />
+      <wsdl:output name="PaymentAuthExtraMethod" message="tns:PaymentAuthExtraMethodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PaymentFulfil">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Use this for delayed fulfilment of order (i.e. topup)</wsdl:documentation>
+      <wsdl:input name="PaymentFulfilMethod" message="tns:PaymentFulfilMethodSoapIn" />
+      <wsdl:output name="PaymentFulfilMethod" message="tns:PaymentFulfilMethodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PaymentComplete">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Use this for completing the payment after it has been fulfilled</wsdl:documentation>
+      <wsdl:input name="PaymentCompleteMethod" message="tns:PaymentCompleteMethodSoapIn" />
+      <wsdl:output name="PaymentCompleteMethod" message="tns:PaymentCompleteMethodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PaymentCancel">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Use this to cancel an order when the fulfilment could not be completed</wsdl:documentation>
+      <wsdl:input name="PaymentCancelMethod" message="tns:PaymentCancelMethodSoapIn" />
+      <wsdl:output name="PaymentCancelMethod" message="tns:PaymentCancelMethodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PaymentList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Mi-Pay internal use only</wsdl:documentation>
+      <wsdl:input name="PaymentListMethod" message="tns:PaymentListMethodSoapIn" />
+      <wsdl:output name="PaymentListMethod" message="tns:PaymentListMethodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSession">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Used for advanced registered user processes</wsdl:documentation>
+      <wsdl:input message="tns:UpdateSessionSoapIn" />
+      <wsdl:output message="tns:UpdateSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Mi-Pay internal use only</wsdl:documentation>
+      <wsdl:input message="tns:UpdateOrderSoapIn" />
+      <wsdl:output message="tns:UpdateOrderSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PaymentServiceSoap" type="tns:PaymentServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PaymentStart">
+      <soap:operation soapAction="http://www.mi-pay.com/WebServices/PaymentStartMethod" style="document" />
+      <wsdl:input name="PaymentStartMethod">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PaymentStartMethod">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PaymentStartWithLocale">
+      <soap:operation soapAction="http://www.mi-pay.com/WebServices/PaymentStartWithLocale" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PaymentStartForKnownUser">
+      <soap:operation soapAction="http://www.mi-pay.com/WebServices/PaymentStartForKnownUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PaymentRetrieve">
+      <soap:operation soapAction="http://www.mi-pay.com/WebServices/PaymentRetrieveMethod" style="document" />
+      <wsdl:input name="PaymentRetrieveMethod">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PaymentRetrieveMethod">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PaymentAuth">
+      <soap:operation soapAction="http://www.mi-pay.com/WebServices/PaymentAuthMethod" style="document" />
+      <wsdl:input name="PaymentAuthMethod">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PaymentAuthMethod">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PaymentAuthExtra">
+      <soap:operation soapAction="http://www.mi-pay.com/WebServices/PaymentAuthExtraMethod" style="document" />
+      <wsdl:input name="PaymentAuthExtraMethod">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PaymentAuthExtraMethod">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PaymentFulfil">
+      <soap:operation soapAction="http://www.mi-pay.com/WebServices/PaymentFulfilMethod" style="document" />
+      <wsdl:input name="PaymentFulfilMethod">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PaymentFulfilMethod">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PaymentComplete">
+      <soap:operation soapAction="http://www.mi-pay.com/WebServices/PaymentCompleteMethod" style="document" />
+      <wsdl:input name="PaymentCompleteMethod">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PaymentCompleteMethod">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PaymentCancel">
+      <soap:operation soapAction="http://www.mi-pay.com/WebServices/PaymentCancelMethod" style="document" />
+      <wsdl:input name="PaymentCancelMethod">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PaymentCancelMethod">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PaymentList">
+      <soap:operation soapAction="http://www.mi-pay.com/WebServices/PaymentListMethod" style="document" />
+      <wsdl:input name="PaymentListMethod">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PaymentListMethod">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSession">
+      <soap:operation soapAction="http://www.mi-pay.com/WebServices/UpdateSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrder">
+      <soap:operation soapAction="http://www.mi-pay.com/WebServices/UpdateOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PaymentServiceSoap12" type="tns:PaymentServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PaymentStart">
+      <soap12:operation soapAction="http://www.mi-pay.com/WebServices/PaymentStartMethod" style="document" />
+      <wsdl:input name="PaymentStartMethod">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PaymentStartMethod">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PaymentStartWithLocale">
+      <soap12:operation soapAction="http://www.mi-pay.com/WebServices/PaymentStartWithLocale" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PaymentStartForKnownUser">
+      <soap12:operation soapAction="http://www.mi-pay.com/WebServices/PaymentStartForKnownUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PaymentRetrieve">
+      <soap12:operation soapAction="http://www.mi-pay.com/WebServices/PaymentRetrieveMethod" style="document" />
+      <wsdl:input name="PaymentRetrieveMethod">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PaymentRetrieveMethod">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PaymentAuth">
+      <soap12:operation soapAction="http://www.mi-pay.com/WebServices/PaymentAuthMethod" style="document" />
+      <wsdl:input name="PaymentAuthMethod">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PaymentAuthMethod">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PaymentAuthExtra">
+      <soap12:operation soapAction="http://www.mi-pay.com/WebServices/PaymentAuthExtraMethod" style="document" />
+      <wsdl:input name="PaymentAuthExtraMethod">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PaymentAuthExtraMethod">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PaymentFulfil">
+      <soap12:operation soapAction="http://www.mi-pay.com/WebServices/PaymentFulfilMethod" style="document" />
+      <wsdl:input name="PaymentFulfilMethod">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PaymentFulfilMethod">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PaymentComplete">
+      <soap12:operation soapAction="http://www.mi-pay.com/WebServices/PaymentCompleteMethod" style="document" />
+      <wsdl:input name="PaymentCompleteMethod">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PaymentCompleteMethod">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PaymentCancel">
+      <soap12:operation soapAction="http://www.mi-pay.com/WebServices/PaymentCancelMethod" style="document" />
+      <wsdl:input name="PaymentCancelMethod">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PaymentCancelMethod">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PaymentList">
+      <soap12:operation soapAction="http://www.mi-pay.com/WebServices/PaymentListMethod" style="document" />
+      <wsdl:input name="PaymentListMethod">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PaymentListMethod">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSession">
+      <soap12:operation soapAction="http://www.mi-pay.com/WebServices/UpdateSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrder">
+      <soap12:operation soapAction="http://www.mi-pay.com/WebServices/UpdateOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PaymentService">
+    <wsdl:port name="PaymentServiceSoap" binding="tns:PaymentServiceSoap">
+      <soap:address location="https://ws-nowtel.cte.mipaytest.co.uk/Live/Talk-Home/PaymentService/PaymentService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PaymentServiceSoap12" binding="tns:PaymentServiceSoap12">
+      <soap12:address location="https://ws-nowtel.cte.mipaytest.co.uk/Live/Talk-Home/PaymentService/PaymentService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

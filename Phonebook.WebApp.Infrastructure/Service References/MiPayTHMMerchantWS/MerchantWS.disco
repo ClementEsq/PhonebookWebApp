@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://ws-nowtel.cte.mipaytest.co.uk/Live/TalkHomeMobile/MerchantWS/MerchantWS.asmx?wsdl" docRef="https://ws-nowtel.cte.mipaytest.co.uk/Live/TalkHomeMobile/MerchantWS/MerchantWS.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="https://ws-nowtel.cte.mipaytest.co.uk/Live/TalkHomeMobile/MerchantWS/MerchantWS.asmx" xmlns:q1="http://www.mi-pay.com/MerchantWebServices" binding="q1:MerchantWSSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="https://ws-nowtel.cte.mipaytest.co.uk/Live/TalkHomeMobile/MerchantWS/MerchantWS.asmx" xmlns:q2="http://www.mi-pay.com/MerchantWebServices" binding="q2:MerchantWSSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Delete Contact";
+}
+
+<table><tr><td height="10px"></td></tr></table>
+
+<table cellpadding="4" cellspacing="4" width="70%" align="center" style="background-color: skyblue; border:solid 2px red; padding-top:20px;">
+    <tr><td colspan="3" style="background-color:gray; font-size:18pt; font-weight:bold; height:30px; text-align:center;">Delete Student Information</td></tr>
+    <tr>
+        <td style="text-align:right;">Name</td>
+        <td>{{Entry.Name}}  </td>
+    </tr>
+    <tr>
+        <td style="text-align:right;">Mobile Number # </td>
+        <td> {{Entry.MobileNumber}}  </td>
+    </tr>
+    <tr>
+        <td style="text-align:right;">Home Number # </td>
+        <td>{{Entry.HomeNumber}}  </td>
+    </tr>
+    <tr>
+        <td style="text-align:right;">Email # </td>
+        <td>{{Entry.EmailAddress}}  </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <input type="button" value="Delete" ng-click="delete()" />
+        </td>
+    </tr>
+
+</table> 

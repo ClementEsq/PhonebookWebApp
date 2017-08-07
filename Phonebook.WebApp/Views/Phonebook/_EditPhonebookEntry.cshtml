@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Edit Contact";
+}
+<table><tr><td height="10px"></td></tr></table>
+
+<h4 style="color:gray; margin-bottom: 20px; font-size:15px;">Edit Contact</h4>
+
+<div class="FormWrapper">
+
+    <form class="form-horizontal">
+        <fieldset>
+
+            <div class="form-group">
+                <label class="col-xs-3 control-label">Name: </label>
+                <div class="col-xs-5">
+                    <input class="form-control" type="text" ng-model="Entry.Name" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-xs-3 control-label">Mobile Number: </label>
+                <div class="col-xs-5">
+                    <input class="form-control" type="text" ng-model="Entry.MobileNumber" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-xs-3 control-label">Home Number: </label>
+                <div class="col-xs-5">
+                    <input class="form-control" type="text" ng-model="Entry.HomeNumber" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-xs-3 control-label">Email: </label>
+                <div class="col-xs-5">
+                    <input class="form-control" type="text" ng-model="Entry.EmailAddress" />
+                </div>
+            </div>
+            <input type="hidden" ng-model="Entry.Id" />
+            <div class="form-group btnWrapper">
+                <label class="col-xs-3 control-label"> </label>
+                <div class="col-xs-5">
+                    <div class="innerBtnWrapperRight">
+                        <input type="submit" value="Save" class="btn clsBtn" ng-click="save()">
+                        <br />
+                        <div>{{error}}</div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
