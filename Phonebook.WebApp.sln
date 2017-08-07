@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phonebook.WebApp", "Phonebook.WebApp\Phonebook.WebApp.csproj", "{735D0CBA-9E9B-4F45-BA56-2BF020DB8745}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phonebook.WebApp", "Phonebook.WebApp\Phonebook.WebApp.csproj", "{AA45D5ED-BA81-4891-9E49-53A9CF18119B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phonebook.WebApp.Tests", "Phonebook.WebApp.Tests\Phonebook.WebApp.Tests.csproj", "{C1B1BF67-22D5-456A-8DD7-CB16E762F751}"
 EndProject
@@ -30,10 +30,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{735D0CBA-9E9B-4F45-BA56-2BF020DB8745}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{735D0CBA-9E9B-4F45-BA56-2BF020DB8745}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{735D0CBA-9E9B-4F45-BA56-2BF020DB8745}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{735D0CBA-9E9B-4F45-BA56-2BF020DB8745}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA45D5ED-BA81-4891-9E49-53A9CF18119B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA45D5ED-BA81-4891-9E49-53A9CF18119B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA45D5ED-BA81-4891-9E49-53A9CF18119B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA45D5ED-BA81-4891-9E49-53A9CF18119B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C1B1BF67-22D5-456A-8DD7-CB16E762F751}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C1B1BF67-22D5-456A-8DD7-CB16E762F751}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1B1BF67-22D5-456A-8DD7-CB16E762F751}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -21,7 +21,7 @@ nuget Modernizr
 nuget Respond
 nuget WebGrease
 nuget Microsoft.CodeDom.Providers.DotNetCompilerPlatform
-nuget Microsoft.Net.Compilers
+nuget Microsoft.Net.Compilers 1.3.2
 nuget angularjs
 nuget Microsoft.AspNet.WebApi
 nuget Microsoft.AspNet.WebApi.Client
