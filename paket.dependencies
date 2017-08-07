@@ -28,4 +28,3 @@ nuget Microsoft.AspNet.WebApi.Client
 nuget Microsoft.AspNet.WebApi.Core
 nuget Microsoft.AspNet.WebApi.WebHost
 nuget Autofac.WebApi2
-nuget Microsoft.ApplicationInsights.Web
