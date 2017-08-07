@@ -72,6 +72,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MyScripts\AddPhonebookEntryController.js" />
+    <Content Include="MyScripts\DeletePhonebookEntryController.js" />
+    <Content Include="MyScripts\EditPhonebookEntryController.js" />
+    <Content Include="MyScripts\Module.js" />
+    <Content Include="MyScripts\PhonebookEntriesController.js" />
+    <Content Include="MyScripts\PhonebookEntryController.js" />
+    <Content Include="MyScripts\Services.js" />
     <Content Include="Scripts\angular-animate.js">
       <Paket>True</Paket>
     </Content>
