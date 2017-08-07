@@ -16,3 +16,4 @@ _NCrunch_*
 *.ncrunchsolution
 *.ncrunchproject
 */bin/feedback/*
+/Phonebook.WebApp/packages/*
